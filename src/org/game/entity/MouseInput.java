@@ -45,7 +45,7 @@ public class MouseInput extends MouseAdapter {
 			while(goalTile.getX() != MainGame.game.player.getCurrentTile().getX() 
 					|| goalTile.getY() != MainGame.game.player.getCurrentTile().getY()) {
 				if(eventStarted) {
-					continue;
+					break;
 				} else {
 					eventStarted = true;
 					MainGame.game.submit(new Event(500) {

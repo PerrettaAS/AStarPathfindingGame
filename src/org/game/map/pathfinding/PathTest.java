@@ -9,7 +9,7 @@ public class PathTest {
 	private Path path;
 
 	public PathTest() {
-		finder = new AStarPathFinder(map, 12, true);
+		finder = new AStarPathFinder(map, 144, true);
 	}
 
 	public int baseX = 0;
