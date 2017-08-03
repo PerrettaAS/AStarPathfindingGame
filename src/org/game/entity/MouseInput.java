@@ -29,7 +29,9 @@ public class MouseInput extends MouseAdapter {
 		final int mouse = e.getButton();
 		if(mouse == MouseEvent.BUTTON1) {
 			Tile goalTile = Map.tiles[(mouseY / 64)][(mouseX / 64)];
-			if(goalTile.getImage().getName().contains("r") || eventStarted) {
+			System.out.println(!goalTile.getImage().getName().equals("g.png"));
+			System.out.println(eventStarted);
+			if(!goalTile.getImage().getName().equals("g.png") || eventStarted) {
 				return;
 			}
 			PathTest pathTest = new PathTest();
@@ -43,7 +45,7 @@ public class MouseInput extends MouseAdapter {
 			while(goalTile.getX() != MainGame.game.player.getCurrentTile().getX() 
 					|| goalTile.getY() != MainGame.game.player.getCurrentTile().getY()) {
 				if(eventStarted) {
-					continue;
+					break;
 				} else {
 					eventStarted = true;
 					MainGame.game.submit(new Event(500) {

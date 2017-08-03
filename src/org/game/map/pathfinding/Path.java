@@ -23,14 +23,6 @@ public class Path {
 		steps.add(0, new Step(x, y));
 	}
 
-	public void addTailStep(int x, int y) {
-		steps.add(new Step(x, y));
-	}
-
-	public boolean contains(int x, int y) {
-		return steps.contains(new Step(x, y));
-	}
-
 	public static class Step {
 		
 		private int x;
@@ -54,9 +46,6 @@ public class Path {
 			return y;
 		}
 
-		public boolean equals(Step other) {
-			return (other.x == this.x) && (other.y == this.y);
-		}
 	}
 	
 }

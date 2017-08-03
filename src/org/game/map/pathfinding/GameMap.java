@@ -9,29 +9,15 @@ public class GameMap {
 	public static final int HEIGHT = Map.MAP_SIZE;
 
 	private boolean[][] visited = new boolean[WIDTH][HEIGHT];
-	
+
 	private Player player;
 
 	public GameMap(Player player) {
 		this.player = player;
 	}
 
-	public void clearVisited() {
-		for(int x = 0; x < getWidthInTiles(); x++) {
-			for(int y = 0; y < getHeightInTiles(); y++) {
-				visited[x][y] = false;
-			}
-		}
-	}
-
-	public boolean visited(int x, int y) {
-		return visited[x][y];
-	}
-
 	public boolean blocked(int sx, int sy, int x, int y) {
-		if(Map.tiles[y][x].getImage().getName().contains("r"))
-			return true;
-		return false;
+		return !Map.tiles[y][x].getImage().getName().equals("g.png");
 	}
 
 	public float getCost(int sx, int sy, int tx, int ty) {

@@ -33,7 +33,7 @@ public class Game extends Canvas implements Runnable {
 	
 	public int tickCount = 0;
 	
-	public Map map = new Map("home");
+	public Map map = new Map("home.txt");
 	public Player player;
 	
 	private final ScheduledExecutorService logicService = Executors.newScheduledThreadPool(1);

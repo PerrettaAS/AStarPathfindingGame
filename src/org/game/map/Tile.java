@@ -9,10 +9,10 @@ public class Tile {
 	private int x;
 	
 	private int y;
-	
+
 	private int width;
-	
-	private int height; 
+
+	private int height;
 	
 	private Sprite image;
 	
@@ -28,24 +28,12 @@ public class Tile {
 		return image;
 	}
 	
-	public int getWidth() {
-		return width;
-	}
-	
-	public int getHeight() {
-		return height;
-	}
-	
 	public int getX() {
 		return x;
 	}
 	
 	public int getY() {
 		return y;
-	}
-	
-	public void setImage(String image) {
-		this.image = new Sprite(image);
 	}
 
 }

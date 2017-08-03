@@ -34,10 +34,7 @@ public class Player {
 	 * @param Tile tile - destination tile for player.
 	 */
 	public boolean clipTile(Tile tile) {
-		if(tile.getImage().getName().contains("r")) {
-			return false;
-		}
-		return true;
+		return tile.getImage().getName().equals("g.png");
 	}
 	
 	public Tile getCurrentTile() {
