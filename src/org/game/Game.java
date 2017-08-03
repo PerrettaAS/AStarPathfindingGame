@@ -144,7 +144,6 @@ public class Game extends Canvas implements Runnable {
 				try {
 					runnable.run();
 				} catch(Exception e) {
-					System.out.println("Server shit happening 1");
 					e.printStackTrace();
 				}
 			}

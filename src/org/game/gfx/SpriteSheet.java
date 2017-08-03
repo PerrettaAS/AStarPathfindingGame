@@ -30,9 +30,6 @@ public class SpriteSheet {
 		for(int i = 0; i < pixels.length; i++) {
 			pixels[i] = (pixels[i] & 0xFF) / 64; //removes alpha channel from the pixel color. Also puts a 0 1 2 3 or 4 in the sprite sheet.
 		}
-		for(int i = 0; i < 8; i++) {
-			System.out.println(pixels[i]); // shows first 8 bits where they fall in the monochromatic sheet.
-		}
 	}
 
 }

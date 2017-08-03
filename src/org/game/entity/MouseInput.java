@@ -41,9 +41,7 @@ public class MouseInput extends MouseAdapter {
 				return;
 			}
 			while(goalTile.getX() != MainGame.game.player.getCurrentTile().getX() 
-					|| goalTile.getY() != MainGame.game.player.getCurrentTile().getY()) { 
-				System.out.println(MainGame.game.player.getCurrentTile().getX());
-				System.out.println(MainGame.game.player.getCurrentTile().getY());
+					|| goalTile.getY() != MainGame.game.player.getCurrentTile().getY()) {
 				if(eventStarted) {
 					continue;
 				} else {
