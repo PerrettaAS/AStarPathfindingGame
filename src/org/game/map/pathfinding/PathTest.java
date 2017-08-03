@@ -7,20 +7,13 @@ public class PathTest {
 	private GameMap map = new GameMap(MainGame.game.player);
 	private AStarPathFinder finder;
 	private Path path;
-	private static PathTest tester;
 
 	public PathTest() {
 		finder = new AStarPathFinder(map, 12, true);
-		tester = this;
 	}
 
 	public int baseX = 0;
 	public int baseY = 0;
-
-	public static PathTest getSingleton() {
-		return tester;
-	}
-
 	public Path getPath(int x, int y, int toX, int toY) {
 		try {
 			baseX = x;
